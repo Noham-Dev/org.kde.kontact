@@ -23,10 +23,7 @@
         "--own-name=org.freedesktop.Akonadi.Control.*",
         "--own-name=org.freedesktop.Akonadi.Resource.*",
         "--own-name=org.kde.accountwizard",
-        "--own-name=org.kde.akonadiconsole.*",
-        "--own-name=org.kde.akregator",
         "--own-name=org.kde.kaddressbook",
-        "--own-name=org.kde.kalarm",
         "--own-name=org.kde.kalendarac",
         "--own-name=org.kde.kioexec.*",
         "--own-name=org.kde.kmail",
@@ -34,8 +31,6 @@
         "--own-name=org.kde.korgac",
         "--own-name=org.kde.korganizer",
         "--own-name=org.kde.pim.*",
-        "--own-name=org.kde.pimsettingexporter",
-        "--own-name=org.kde.sieveeditor",
         "--share=ipc",
         "--share=network",
         "--socket=fallback-x11",
@@ -1079,27 +1074,6 @@
             ]
         },
         {
-            "name": "akregator",
-            "config-opts": [
-                "-DBUILD_TESTING=OFF",
-                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
-            ],
-            "buildsystem": "cmake-ninja",
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://download.kde.org/stable/release-service/26.08.2/src/akregator-26.08.2.tar.xz",
-                    "sha256": "d819df8e453e45167ed90c3bf99073017f325f792832b97ce9df5445f844deed",
-                    "x-checker-data": {
-                        "type": "anitya",
-                        "project-id": 8763,
-                        "stable-only": true,
-                        "url-template": "https://download.kde.org/stable/release-service/$version/src/akregator-$version.tar.xz"
-                    }
-                }
-            ]
-        },
-        {
             "name": "korganizer",
             "config-opts": [
                 "-DBUILD_TESTING=OFF",
@@ -1116,28 +1090,6 @@
                         "project-id": 8763,
                         "stable-only": true,
                         "url-template": "https://download.kde.org/stable/release-service/$version/src/korganizer-$version.tar.xz"
-                    }
-                }
-            ]
-        },
-        {
-            "name": "kalarm",
-            "disabled": true,
-            "config-opts": [
-                "-DBUILD_TESTING=OFF",
-                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
-            ],
-            "buildsystem": "cmake-ninja",
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://download.kde.org/stable/release-service/26.08.2/src/kalarm-26.08.2.tar.xz",
-                    "sha256": "b8b68cf4c20903adecdacf867df0fe3c538593fca0506a3719fe7d249dd917c4",
-                    "x-checker-data": {
-                        "type": "anitya",
-                        "project-id": 8763,
-                        "stable-only": true,
-                        "url-template": "https://download.kde.org/stable/release-service/$version/src/kalarm-$version.tar.xz"
                     }
                 }
             ]
@@ -1373,27 +1325,6 @@
             ]
         },
         {
-            "name": "grantlee-editor",
-            "config-opts": [
-                "-DBUILD_TESTING=OFF",
-                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
-            ],
-            "buildsystem": "cmake-ninja",
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://download.kde.org/stable/release-service/26.08.2/src/grantlee-editor-26.08.2.tar.xz",
-                    "sha256": "dadb8a1227ce7a30119b426a82fba0eab18cf08eea1ec20c09dc105ffd830ecc",
-                    "x-checker-data": {
-                        "type": "anitya",
-                        "project-id": 8763,
-                        "stable-only": true,
-                        "url-template": "https://download.kde.org/stable/release-service/$version/src/grantlee-editor-$version.tar.xz"
-                    }
-                }
-            ]
-        },
-        {
             "name": "kmail-account-wizard",
             "config-opts": [
                 "-DBUILD_TESTING=OFF",
@@ -1410,90 +1341,6 @@
                         "project-id": 8763,
                         "stable-only": true,
                         "url-template": "https://download.kde.org/stable/release-service/$version/src/kmail-account-wizard-$version.tar.xz"
-                    }
-                }
-            ]
-        },
-        {
-            "name": "pim-data-exporter",
-            "config-opts": [
-                "-DBUILD_TESTING=OFF",
-                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
-            ],
-            "buildsystem": "cmake-ninja",
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://download.kde.org/stable/release-service/26.08.2/src/pim-data-exporter-26.08.2.tar.xz",
-                    "sha256": "d4c7d9966e53cc7318d31cfcb447f22bc43fdd4186ef0c2b66229a4b9ea9e4bc",
-                    "x-checker-data": {
-                        "type": "anitya",
-                        "project-id": 8763,
-                        "stable-only": true,
-                        "url-template": "https://download.kde.org/stable/release-service/$version/src/pim-data-exporter-$version.tar.xz"
-                    }
-                }
-            ]
-        },
-        {
-            "name": "pim-sieve-editor",
-            "config-opts": [
-                "-DBUILD_TESTING=OFF",
-                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
-            ],
-            "buildsystem": "cmake-ninja",
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://download.kde.org/stable/release-service/26.08.2/src/pim-sieve-editor-26.08.2.tar.xz",
-                    "sha256": "f7f24d4c0496ee4565abc6821a3b353f7d6b7d5994f247820427243ecafd551c",
-                    "x-checker-data": {
-                        "type": "anitya",
-                        "project-id": 8763,
-                        "stable-only": true,
-                        "url-template": "https://download.kde.org/stable/release-service/$version/src/pim-sieve-editor-$version.tar.xz"
-                    }
-                }
-            ]
-        },
-        {
-            "name": "mbox-importer",
-            "config-opts": [
-                "-DBUILD_TESTING=OFF",
-                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
-            ],
-            "buildsystem": "cmake-ninja",
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://download.kde.org/stable/release-service/26.08.2/src/mbox-importer-26.08.2.tar.xz",
-                    "sha256": "48ef7b90a7ce35fe2253d262d17e7d74f78391bc566048bf521450e491f8b65d",
-                    "x-checker-data": {
-                        "type": "anitya",
-                        "project-id": 8763,
-                        "stable-only": true,
-                        "url-template": "https://download.kde.org/stable/release-service/$version/src/mbox-importer-$version.tar.xz"
-                    }
-                }
-            ]
-        },
-        {
-            "name": "akonadiconsole",
-            "config-opts": [
-                "-DBUILD_TESTING=OFF",
-                "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
-            ],
-            "buildsystem": "cmake-ninja",
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://download.kde.org/stable/release-service/26.08.2/src/akonadiconsole-26.08.2.tar.xz",
-                    "sha256": "2d1fe95758b1878460e91b60bc65267486db308e52199a90f60ef54703210949",
-                    "x-checker-data": {
-                        "type": "anitya",
-                        "project-id": 8763,
-                        "stable-only": true,
-                        "url-template": "https://download.kde.org/stable/release-service/$version/src/akonadiconsole-$version.tar.xz"
                     }
                 }
             ]
